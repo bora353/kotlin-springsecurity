@@ -1,0 +1,37 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+    encoding:
+      charset: UTF-8
+      enabled: true
+      # request, response? encoding ??
+      force: true
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:54323/postgres
+    username: root
+    password: root
+  jpa:
+    # ??? ????? ?????? ???? DB? ?? ????? ??
+    open-in-view: true
+    hibernate:
+      ddl-auto: create
+#      use-new-id-generator-mappings: false
+    properties:
+      hibernate:
+        show_sql: false
+        # sql ?? ?? ??
+        format_sql: true
+        highlight_sql: true
+logging:
+  pattern:
+    console: "[%d{HH:mm:ss.SSS}][%-5level][%logger.%method:line%Line] - %msg%n"
+  level:
+    org:
+      hibernate:
+        # ??? sql ?? ?? (??? show_sql? fasel)
+        SQL: debug
+        type.descriptor.sql: trace
