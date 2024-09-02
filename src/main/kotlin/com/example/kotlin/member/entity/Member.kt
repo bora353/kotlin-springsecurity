@@ -1,6 +1,6 @@
 package com.example.kotlin.member.entity
 
-import com.example.kotlin.common.status.`Gender.kt`
+import com.example.kotlin.common.status.Gender
 import jakarta.persistence.*
 import java.time.LocalDate
 
@@ -26,7 +26,7 @@ class Member (
 
     @Column(nullable = false, length = 30)
     @Enumerated(EnumType.STRING)
-    val gender: `Gender.kt`,
+    val gender: Gender,
 
     @Column(nullable = false, length = 30)
     val email: String,

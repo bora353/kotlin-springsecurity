@@ -1,7 +1,6 @@
 package com.example.kotlin.member.service
 
 import com.example.kotlin.member.dto.MemberDtoRequest
-import com.example.kotlin.member.entity.Member
 import com.example.kotlin.member.repository.MemberRepository
 import jakarta.transaction.Transactional
 import org.springframework.stereotype.Service
